@@ -1,0 +1,14 @@
+private int funcaohash(double chave) {
+    //TODO: Alterar a função para não ter colisão 
+    // com 250 elementos...
+    System.out.println("Inserindo Elemento V: " + chave);
+    int v = (int) chave,
+    half = 89;
+    if (v < half) {
+        return (Math.abs(v) % half);
+    }
+    if (v > TAM_MAX) {
+        return (Math.abs(v + half) % TAM_MAX);
+    }
+    return (Math.abs(v) % TAM_MAX);
+  }
