@@ -1,0 +1,4 @@
+https://repl.it/@EG8/MarriedMistyroseCalculators#ponto.h
+https://www.geeksforgeeks.org/minimum-number-of-edges-between-two-vertices-of-a-graph/
+https://www.geeksforgeeks.org/minimum-number-of-edges-between-two-vertices-of-a-graph-using-dfs/
+https://www.geeksforgeeks.org/minimum-edges-to-be-added-in-a-directed-graph-so-that-any-node-can-be-reachable-from-a-given-node/
