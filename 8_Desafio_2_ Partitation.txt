@@ -1,0 +1,39 @@
+var swap = function(array, firstIndex, secondIndex) {
+    var temp = array[firstIndex];
+    array[firstIndex] = array[secondIndex];
+    array[secondIndex] = temp;
+};
+
+var partition = function(array, p, r) {
+    var q = p;
+
+    for (var j = p; j < r; j++) {
+        if (array[j] <= array[r]) {
+            swap(array, j, q);
+            q++;
+        }
+    }
+    
+    swap(array, r, q);
+    return q;
+};
+
+var quickSort = function(array, p, r) {
+    if (p < r) {
+        var pivot = partition(array, p, r);
+        quickSort(array, p, pivot-1);
+        quickSort(array, pivot+1, r);
+    }
+};
+
+var array = [9, 7, 5, 11, 12, 2, 14, 3, 10, 4, 6];
+var q = partition(array, 0, array.length-1);
+println("Array after partitioning: " + array);
+Program.assertEqual(q, 4);
+Program.assertEqual(array, [5, 2, 3, 4, 6, 7, 14, 9, 10, 11, 12]);
+
+var array = [0, 0, 0, -1, -2, -3, -9, -10, 1, 4, 6];
+var e = partition(array, 0, array.length-1);
+println("Array after partitioning: " + array);
+Program.assertEqual(e, 10);
+Program.assertEqual(array, [0, 0, 0, -1, -2, -3, -9, -10, 1, 4, 6]);
