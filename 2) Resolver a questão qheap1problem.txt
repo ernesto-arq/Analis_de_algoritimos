@@ -1,0 +1,31 @@
+import java.io.;
+import java.util.;
+import java.text.;
+import java.math.;
+import java.util.regex.;
+public class Solucao {
+    public static void main(String[] args) {
+        PriorityQueueInteger heap=new PriorityQueueInteger();
+        Scanner ab=new Scanner(System.in);
+        int n=ab.nextInt();
+        while(n--0)
+            {
+            int k=ab.nextInt();
+             int data;
+            switch(k)
+                {
+                case 1
+                 data=ab.nextInt();
+                heap.offer(data); 
+                break;
+                case 2
+                 data=ab.nextInt();
+                heap.remove(data);
+                break;
+                case 3
+                System.out.println(heap.peek());
+                break;
+            }
+        }
+    }
+}
